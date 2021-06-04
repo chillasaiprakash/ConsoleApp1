@@ -10,8 +10,8 @@ namespace p6
     //adjacent in the original string are separated from each other by a "*
     class Program
     {
-           static String result = "";
-            static void pairStar(String test,int i)
+           static string result = "";
+            static void pairStar(string test,int i)
             {
                 result = result + test[i];
                 if (i == test.Length - 1)
@@ -23,9 +23,9 @@ namespace p6
             }
 
             
-            public static void Main(String[] args)
+            public static void Main(string[] args)
             {
-                String test = "qquuaaddrraanntt";
+                string test = "qquuaaddrraanntt";
                 pairStar(test, 0);
                 Console.WriteLine(result);
                 Console.ReadLine();
