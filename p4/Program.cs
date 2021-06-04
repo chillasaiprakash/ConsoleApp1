@@ -13,36 +13,46 @@ namespace _2sample
         //If the array is smaller than length 2, use whatever elements are present.
         class Program
         {
-            public int Front(params int[] nums)
+            public int[] Front(params int[] nums)
             {
-                int[] arr2 = new int[4];
-                if (nums.Length > 2)
+               // int[] arr2 = new int[4];
+                if (nums.Length <= 2)
                 {
+                    int[] arr2 = new int[2];
                     //arr2 = new int[2];
+                    Console.WriteLine("if statement");
                     arr2[0] = nums[0];
                     arr2[1] = nums[1];
 
 
-                    return arr2[0] + arr2[1];
+                    return arr2;
 
                 }
                 else
                 {
-                    arr2 = new int[1];
+                    int[] arr2 = new int[2];
+                    //arr2 = new int[2];
+                    Console.WriteLine("else statement");
                     arr2[0] = nums[0];
-                    return arr2[0];
+                    arr2[1] = nums[1];
+                    return arr2;
                 }
             }
 
             static void Main(string[] args)
             {
-                int[] nums = new int[4];
+                int[] nums = new int[2];
                 nums[0] = 1;
                 nums[1] = 2;
-                nums[2] = 3;
-                nums[3] = 4;
+                //nums[2] = 3;
+                //nums[3] = 4;
                 Program p = new Program();
-                Console.WriteLine("values is{0}", p.Front(nums));
+          
+                var result = p.Front(nums);
+                foreach (var item in result)
+                {
+                    Console.WriteLine("values is{0}",item);
+                }
                 Console.ReadLine();
             }
 
