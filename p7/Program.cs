@@ -8,6 +8,7 @@ namespace p7
 {
     class Program
     {
+        //To reverse a string
         static void Main(string[] args)
         {
             string normal = "sai";
