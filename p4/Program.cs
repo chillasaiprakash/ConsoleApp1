@@ -30,28 +30,30 @@ namespace _2sample
                 }
                 else
                 {
-                    int[] arr2 = new int[2];
+                    int[] arr2 = new int[4];
                     //arr2 = new int[2];
                     Console.WriteLine("else statement");
-                    arr2[0] = nums[0];
-                    arr2[1] = nums[1];
+                    for(int i=0;i<arr2.Length;i++)
+                    {
+                        arr2[i] = nums[i];
+                    }
                     return arr2;
                 }
             }
 
             static void Main(string[] args)
             {
-                int[] nums = new int[2];
+                int[] nums = new int[4];
                 nums[0] = 1;
                 nums[1] = 2;
-                //nums[2] = 3;
-                //nums[3] = 4;
+                nums[2] = 3;
+                nums[3] = 4;
                 Program p = new Program();
           
                 var result = p.Front(nums);
                 foreach (var item in result)
                 {
-                    Console.WriteLine("values is{0}",item);
+                    Console.WriteLine("values is {0} ",item);
                 }
                 Console.ReadLine();
             }

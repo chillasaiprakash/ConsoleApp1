@@ -13,11 +13,6 @@ namespace p5
             //Given a non - empty array, return true if there is a place to split the array so that
             //the sum of the numbers on one side is equal to the sum of the numbers on the other side.
             int[] split = new int[4];
-            //for (int i = 0; i < split.GetLength(0); i++)
-            //{
-            //    Console.WriteLine("element -{0} : ", i);
-            //    split[i] = Convert.ToInt32(Console.ReadLine());
-            //}
             split[0] = 1;
             split[1] = 2;
             split[2] = 3;

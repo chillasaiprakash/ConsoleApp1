@@ -10,24 +10,30 @@ namespace p6
     //adjacent in the original string are separated from each other by a "*
     class Program
     {
-           static string result = "";
-            static void pairStar(string test,int i)
+           
+            public string check(string test)
+            {
+              string result = "";
+            for (int i = 1; i < test.Length-1; i++)
             {
                 result = result + test[i];
-                if (i == test.Length - 1)
-                    return;
                 if (test[i] == test[i + 1])
                     result = result + '*';
-
-                pairStar(test, i + 1);
+               
             }
+            return result;
+        }
 
             
             public static void Main(string[] args)
             {
                 string test = "qquuaaddrraanntt";
-                pairStar(test, 0);
-                Console.WriteLine(result);
+                Program c = new Program();
+                 var  s = c.check(test);
+            foreach (var items in s)
+            {
+                Console.WriteLine(items);
+            }
                 Console.ReadLine();
             }
         }
